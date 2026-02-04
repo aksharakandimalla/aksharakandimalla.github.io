@@ -1,0 +1,147 @@
+/* --- Variables --- */
+:root {
+  --bg: #0f0f0f;
+  --surface: #1a1a1a;
+  --text: #e8e6e3;
+  --text-muted: #9a9691;
+  --accent: #7dd3c0;
+  --accent-dim: rgba(125, 211, 192, 0.15);
+  --border: #2d2d2d;
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --space: 1.5rem;
+  --radius: 12px;
+}
+
+/* --- Reset & base --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+a:hover {
+  color: var(--text);
+}
+
+/* --- Layout --- */
+.page {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 8vw, 4rem) var(--space);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --- Hero --- */
+.hero {
+  margin-bottom: 2.5rem;
+}
+
+.hero__name {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35em;
+  line-height: 1.15;
+}
+
+.hero__tagline {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin: 0 0 0.75em;
+  font-family: var(--font-mono);
+}
+
+.hero__bio {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* --- Links --- */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-weight: 500;
+  width: 100%;
+  max-width: 20rem;
+}
+
+.link:hover {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.link__icon {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* --- Footer --- */
+.footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer a {
+  color: var(--text-muted);
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+/* --- Accessibility --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
