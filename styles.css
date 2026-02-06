@@ -47,7 +47,7 @@ a:hover {
 
 /* --- Layout --- */
 .page {
-  max-width: 42rem;
+  max-width: 50rem;
   margin: 0 auto;
   padding: clamp(2rem, 8vw, 4rem) var(--space);
   min-height: 100vh;
@@ -168,75 +168,21 @@ a:hover {
 
 /* Experience */
 .exp {
-  padding: 1rem 1.1rem;
+  padding: 0.85rem 1rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
 
-.exp--single {
-  padding: 0.85rem 1rem;
-}
-
-.exp-items {
+.exp-lines {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-}
-
-.exp-item {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.exp-item__left {
-  min-width: 0;
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.45rem;
-}
-
-.exp-item__company {
-  font-weight: 600;
-  color: var(--text);
-}
-
-.exp-item__sep {
+  gap: 0.3rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
-}
-
-.exp-item__role {
-  color: var(--text-muted);
-}
-
-.exp-item__intern {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.exp-item__dates {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  white-space: nowrap;
-}
-
-@media (max-width: 520px) {
-  .exp-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.1rem;
-  }
-
-  .exp-item__dates {
-    white-space: normal;
-  }
 }
 
 /* Projects */
