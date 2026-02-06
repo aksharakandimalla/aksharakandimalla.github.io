@@ -53,7 +53,7 @@ a:hover {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 /* --- Hero --- */
@@ -116,7 +116,7 @@ a:hover {
   opacity: 0.8;
 }
 
-/* --- Section (Skills, Projects, Certifications) --- */
+/* --- Section (Skills, Experience, Projects, Certifications) --- */
 .section {
   margin-top: 2.5rem;
 }
@@ -130,22 +130,83 @@ a:hover {
   letter-spacing: 0.02em;
 }
 
-/* Skills */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+/* Section subtitle (e.g. Internships) */
+.section__subtitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin: 1.75rem 0 0.75rem;
 }
 
-.skill {
-  display: inline-block;
-  padding: 0.4rem 0.75rem;
+/* Skills */
+.skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.skill-group {
+  padding: 0.8rem 1rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+}
+
+.skill-group__title {
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.skill-group__items {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Experience */
+.exp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.exp {
+  padding: 1rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.exp__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.exp__role {
+  font-weight: 600;
   color: var(--text);
+}
+
+.exp__year {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.exp__company {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.exp-list--compact .exp {
+  padding: 0.85rem 1rem;
 }
 
 /* Projects */
